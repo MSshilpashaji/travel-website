@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WanderWorld - Travel with Us</title>
+
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet"/>
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f9fa;
+    }
+
+
+    .navbar {
+      background: linear-gradient(90deg, #00c6ff, #0072ff);
+    }
+    .navbar .nav-link {
+      color: white !important;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    .navbar .nav-link:hover {
+      color: #ffd700 !important;
+    }
+
+
+    .hero {
+      background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') no-repeat center center/cover;
+      height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      position: relative;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+    }
+    .hero p {
+      font-size: 1.2rem;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+    }
+
+    .card {
+      border-radius: 15px;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+    }
+    .card img {
+      height: 220px;
+      object-fit: cover;
+    }
+    .card-title {
+      font-weight: bold;
+    }
+
+
+    #contact {
+      background: #f0f8ff;
+    }
+    #contact h2 {
+      font-weight: bold;
+    }
+    #contact .btn-primary {
+      background: linear-gradient(90deg, #0072ff, #00c6ff);
+      border: none;
+    }
+    #contact .btn-primary:hover {
+      background: linear-gradient(90deg, #00c6ff, #0072ff);
+    }
+
+    footer {
+      background: #212529;
+      color: white;
+      padding: 25px 0;
+    }
+
+    footer a.text-light:hover {
+      color: #00c6ff !important;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+
+    footer .col-md-2 a:hover,
+    footer .col-md-3 a:hover {
+      text-decoration: underline;
+    }
+
+
+    footer .bi {
+      font-size: 1.2rem;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+    footer .bi:hover {
+      color: #ffd700;
+      transform: scale(1.2);
+    }
+
+    footer form .btn-danger {
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+    footer form .btn-danger:hover {
+      background-color: #00c6ff;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">TravelTime</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#destinations">Destinations</a></li>
+        <li class="nav-item"><a class="nav-link" href="#tours">Tours</a></li>
+        <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">More Pages</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#faq">FAQ</a></li>
+            <li><a class="dropdown-item" href="#testimonials">Testimonials</a></li>
+            <li><a class="dropdown-item" href="#team">Team</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<section id="home" class="hero">
+  <div class="hero-content">
+    <h1>Discover Beautiful Places</h1>
+    <p>Explore the world with WanderWorld Travel Agency</p>
+    <a href="#destinations" class="btn btn-lg btn-primary mt-3">Explore Now</a>
+  </div>
+</section>
+
+<section id="why-choose-us" class="py-5 bg-light">
+  <div class="container text-center">
+    <h2 class="mb-4 fw-bold">Why Choose Us</h2>
+    <p class="mb-5 text-muted">
+      What Makes Us Different<br>
+      Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur adipisci velit
+    </p>
+
+    <div class="row g-4">
+
+
+      <div class="col-md-3">
+        <div class="p-4 h-100 rounded"
+             style="transition: all 0.3s;"
+             onmouseover="this.style.border='1px solid #f44336'; this.style.boxShadow='0 0 15px rgba(244,67,54,0.2)';"
+             onmouseout="this.style.border='none'; this.style.boxShadow='none';">
+          <div class="bg-danger bg-opacity-10 d-inline-flex align-items-center justify-content-center rounded-circle mb-3" style="width:80px;height:80px;">
+            <i class="fas fa-compass fa-2x text-danger"></i>
+          </div>
+          <h5 class="fw-bold">Expert Navigation</h5>
+          <p class="text-muted mb-0">Quis nostrum exercitationem ullam corporis suscipit laboriosam</p>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="p-4 h-100 rounded"
+             style="transition: all 0.3s;"
+             onmouseover="this.style.border='1px solid #f44336'; this.style.boxShadow='0 0 15px rgba(244,67,54,0.2)';"
+             onmouseout="this.style.border='none'; this.style.boxShadow='none';">
+          <div class="bg-danger bg-opacity-10 d-inline-flex align-items-center justify-content-center rounded-circle mb-3" style="width:80px;height:80px;">
+            <i class="fas fa-heart fa-2x text-danger"></i>
+          </div>
+          <h5 class="fw-bold">Personalized Care</h5>
+          <p class="text-muted mb-0">Excepteur sint occaecat cupidatat non proident sunt in culpa</p>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="p-4 h-100 rounded"
+             style="transition: all 0.3s;"
+             onmouseover="this.style.border='1px solid #f44336'; this.style.boxShadow='0 0 15px rgba(244,67,54,0.2)';"
+             onmouseout="this.style.border='none'; this.style.boxShadow='none';">
+          <div class="bg-danger bg-opacity-10 d-inline-flex align-items-center justify-content-center rounded-circle mb-3" style="width:80px;height:80px;">
+            <i class="fas fa-bolt fa-2x text-danger"></i>
+          </div>
+          <h5 class="fw-bold">Instant Booking</h5>
+          <p class="text-muted mb-0">Ut enim ad minim veniam quis nostrud exercitation ullamco</p>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="p-4 h-100 rounded"
+             style="transition: all 0.3s;"
+             onmouseover="this.style.border='1px solid #f44336'; this.style.boxShadow='0 0 15px rgba(244,67,54,0.2)';"
+             onmouseout="this.style.border='none'; this.style.boxShadow='none';">
+          <div class="bg-danger bg-opacity-10 d-inline-flex align-items-center justify-content-center rounded-circle mb-3" style="width:80px;height:80px;">
+            <i class="fas fa-compass text-danger fs-3"></i>
+          </div>
+          <h5 class="fw-bold">Worldwide Coverage</h5>
+          <p class="text-muted mb-0">Duis aute irure dolor in reprehenderit in voluptate velit esse</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="destinations" class="py-5">
+  <div class="container text-center">
+    <h2 class="mb-5">Popular Destinations</h2>
+    <div class="row g-4">
+
+      <div class="col-md-4">
+        <div class="card shadow">
+          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" class="card-img-top" alt="Maldives">
+          <div class="card-body">
+            <h5 class="card-title">Maldives</h5>
+            <p class="card-text">Crystal clear waters and white sand beaches await you in this tropical paradise.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card shadow">
+          <img src="https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcSZpaXS4GdEeoUzk0FpYcu5AL_qWzBUmxEAL6-PsV1gh1nE_HTq87NAVX3TLxcnLCiv9DuYlApvg9-mCLWSbrgPs9CHuan6s3r6bk7IZw" class="card-img-top" alt="Switzerland">
+          <div class="card-body">
+            <h5 class="card-title">Switzerland</h5>
+            <p class="card-text">Experience breathtaking mountain views and serene lakes in the Swiss Alps.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card shadow">
+          <img src="https://images.unsplash.com/photo-1493558103817-58b2924bce98" class="card-img-top" alt="Paris">
+          <div class="card-body">
+            <h5 class="card-title">Paris</h5>
+            <p class="card-text">The city of lights, romance, and art. Don’t miss the iconic Eiffel Tower!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card shadow">
+          <img src="https://images.unsplash.com/photo-1681844931547-54cb3b439453?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDEzNDF8MHwxfGFsbHwzfHx8fHx8Mnx8MTY4MTk2MzU0Mw&ixlib=rb-4.0.3&q=85&rect=0%2C1906%2C4160%2C2427&w=1328&dpr=2" class="card-img-top" alt="Machu Picchu">
+          <div class="card-body">
+            <h5 class="card-title">Machu Picchu, Peru</h5>
+            <p class="card-text">Explore the ancient Incan city perched high in the Andes Mountains of Peru.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card shadow">
+          <img src="https://www.oyorooms.com/blog/wp-content/uploads/2019/09/bali.jpg" class="card-img-top" alt="Bali">
+          <div class="card-body">
+            <h5 class="card-title">Bali</h5>
+            <p class="card-text">Discover tropical paradise with ancient temples, lush rice terraces, and world-class beaches.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card shadow">
+          <img src="https://static.wixstatic.com/media/a9c218_254c27228794416bbb9aa62d8203cc0e~mv2.jpg/v1/fill/w_280,h_175,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/a9c218_254c27228794416bbb9aa62d8203cc0e~mv2.jpg" class="card-img-top" alt="Greece">
+          <div class="card-body">
+            <h5 class="card-title">Santorini, Greece</h5>
+            <p class="card-text">Discover the historic ruins, white-washed buildings, and beautiful islands of Greece.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="py-5 bg-white text-center">
+  <div class="container">
+    <h2 class="fw-bold mb-3">Can't Decide Where to Go?</h2>
+    <p class="text-muted mb-4">
+      Our travel experts are here to help you find the perfect destination based on your preferences, budget, and travel style.
+    </p>
+
+    <div class="d-flex justify-content-center gap-3 flex-wrap">
+
+      <a href="#" class="btn btn-danger px-4 py-2 rounded-pill fw-semibold btn-hover-1">
+        View All Destinations
+      </a>
+
+      <a href="#" class="btn btn-outline-danger px-4 py-2 rounded-pill fw-semibold btn-hover-2">
+        Talk to Expert
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+
+  .btn-hover-1:hover {
+    background-color: #c62828 !important;
+    border-color: #c62828 !important;
+    color: #fff !important;
+  }
+
+  .btn-hover-2:hover {
+    background-color: #f44336 !important;
+    color: #fff !important;
+    border-color: #f44336 !important;
+  }
+</style>
+
+
+<footer class="bg-dark text-light pt-5 pb-4">
+  <div class="container text-md-left">
+    <div class="row text-md-left">
+
+      <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+        <h5 class="text-uppercase mb-4 font-weight-bold text-warning">TravelTime</h5>
+        <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.
+        Donec velit neque, auctor sit amet aliquam vel ullamcorper sit amet ligula.</p>
+
+        <h6 class="text-uppercase mb-3">Stay Updated</h6>
+        <form class="d-flex">
+          <input type="email" class="form-control me-2" placeholder="Enter your email">
+          <button class="btn btn-danger"><i class="bi bi-send"></i></button>
+        </form>
+      </div>
+
+      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+        <h6 class="text-uppercase mb-4 font-weight-bold">Company</h6>
+        <p><a href="#" class="text-light text-decoration-none">About</a></p>
+        <p><a href="#" class="text-light text-decoration-none">Careers</a></p>
+        <p><a href="#" class="text-light text-decoration-none">Press</a></p>
+        <p><a href="#" class="text-light text-decoration-none">Blog</a></p>
+        <p><a href="#" class="text-light text-decoration-none">Contact</a></p>
+      </div>
+
+      <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+        <h6 class="text-uppercase mb-4 font-weight-bold">Solutions</h6>
+        <p><a href="#" class="text-light text-decoration-none">Digital Strategy</a></p>
+        <p><a href="#" class="text-light text-decoration-none">Cloud Computing</a></p>
+        <p><a href="#" class="text-light text-decoration-none">Data Analytics</a></p>
+        <p><a href="#" class="text-light text-decoration-none">AI Solutions</a></p>
+        <p><a href="#" class="text-light text-decoration-none text-danger">Cybersecurity</a></p>
+      </div>
+
+      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+        <h6 class="text-uppercase mb-4 font-weight-bold">Get in Touch</h6>
+        <p><i class="bi bi-geo-alt-fill me-2"></i>2847 Maple Avenue, Los Angeles, CA 90210</p>
+        <p><i class="bi bi-telephone-fill me-2"></i>+1 (555) 987-6543</p>
+        <p><i class="bi bi-envelope-fill me-2"></i>contact@example.com</p>
+        <div>
+          <a href="#" class="text-light me-3"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="text-light me-3"><i class="bi bi-twitter"></i></a>
+          <a href="#" class="text-light me-3"><i class="bi bi-linkedin"></i></a>
+          <a href="#" class="text-light me-3"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="text-light me-3"><i class="bi bi-github"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <hr class="my-4">
+
+    <div class="row align-items-center">
+      <div class="col-md-7 col-lg-8">
+        <p>© 2025 TravelTime. All Rights Reserved |
+          <a href="#" class="text-decoration-none text-light">Privacy Policy</a> |
+          <a href="#" class="text-decoration-none text-light">Terms of Service</a> |
+          <a href="#" class="text-decoration-none text-light">Cookie Policy</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
